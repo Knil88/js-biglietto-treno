@@ -29,7 +29,12 @@ let salePrice =(ticketPrice - discount).toFixed(2);
 
 console.log(salePrice)
 
-document.getElementById("title").innerHTML = `Lei percorrerà ${route} chilometri ed usufruendo dello sconto  under 18 il prezzo del biglietto sarà  ${salePrice}€`;
+document.getElementById("thank").innerHTML = `Grazie per avere scelto Trenitalia`;
+document.getElementById("picture").innerHTML ;
+document.getElementById("route").innerHTML = `Lei percorrerà ${route} chilometri`;
+document.getElementById("age").innerHTML = `Lei ha ${userAge} Anni`;
+document.getElementById("price").innerHTML = `il prezzo del suo biglietto è ${salePrice}€ con sconto al 20%`;
+
 
 
 }
@@ -37,19 +42,28 @@ document.getElementById("title").innerHTML = `Lei percorrerà ${route} chilometr
 //impostare lo sconto se l'utente ha più di 65 anni
 
 else if(userAge >=65){
-    let oldDiscount = ticketprice * 40 / 100;
+    let oldDiscount = ticketPrice * 40 / 100;
     let agePrice = (ticketPrice - oldDiscount).toFixed(2);
 
     console.log(agePrice)
 
-    document.getElementById("title").innerHTML = `Lei percorrerà ${route} chilometri ed usufruendo dello sconto  over 65 il prezzo del biglietto sarà  ${agePrice} €`;
+    document.getElementById("thank").innerHTML = `Grazie per avere scelto Trenitalia`;
+    document.getElementById("picture").innerHTML  ;
+    document.getElementById("route").innerHTML = `Lei percorrerà ${route} chilometri`;
+    document.getElementById("age").innerHTML = `Lei ha ${userAge} Anni`;
+    document.getElementById("price").innerHTML = `il prezzo del suo biglietto è ${agePrice}€ con sconto al 40%`;
+    
 
 }
 
 //output
 
 else{
-    document.getElementById("title").innerHTML = `Lei percorrerà ${route} chilometri , ma dato che non può usufruire di alcuno sconto il prezzo del biglietto sarà quello base che ammonta a ${ticketPrice}€`;
+    document.getElementById("thank").innerHTML = `Grazie per avere scelto Trenitalia`;
+    document.getElementById("picture").innerHTML ;
+    document.getElementById("route").innerHTML = `Lei percorrerà ${route} chilometri`;
+    document.getElementById("age").innerHTML = `Lei ha ${userAge} Anni`;
+    document.getElementById("price").innerHTML = `il prezzo del suo biglietto è ${ticketPrice}€`;
 }
 
 
