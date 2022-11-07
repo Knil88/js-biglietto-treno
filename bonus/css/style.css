@@ -28,3 +28,39 @@ body{
 #container div{
     padding: 20px 0px;
 }
+ #thank{
+    animation: 3s anim-lineUp ease-out ;
+    
+}
+#route{
+    animation: 8s anim-lineUp ease-out ;
+    
+}
+
+#age{
+    animation: 13s anim-lineUp ease-out ;
+    
+}
+
+#price{
+    animation: 18s anim-lineUp ease-out ;
+    
+}
+
+@keyframes anim-lineUp {
+    0% {
+      opacity: 0;
+      transform: translateY(80%);
+    }
+    20% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
