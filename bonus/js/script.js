@@ -30,6 +30,8 @@ let salePrice =(ticketPrice - discount);
 
 console.log(salePrice)
 
+//output sconto 20%
+
 document.getElementById("thank").innerHTML = `Grazie per avere scelto Trenitalia`;
 document.getElementById("picture").innerHTML ;
 document.getElementById("route").innerHTML = `Lei percorrerà ${route} chilometri`;
@@ -48,6 +50,8 @@ else if(userAge >=65){
 
     console.log(agePrice)
 
+//output sconto 40%
+
     document.getElementById("thank").innerHTML = `Grazie per avere scelto Trenitalia`;
     document.getElementById("picture").innerHTML  ;
     document.getElementById("route").innerHTML = `Lei percorrerà ${route} chilometri`;
@@ -57,7 +61,7 @@ else if(userAge >=65){
 
 }
 
-//output
+//output normale
 
 else{
     document.getElementById("thank").innerHTML = `Grazie per avere scelto Trenitalia`;
