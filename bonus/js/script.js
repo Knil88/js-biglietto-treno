@@ -19,13 +19,14 @@ console.log(kmPrice,"€ è il prezzo a chilometro");
 let ticketPrice = route * kmPrice;
 
 console.log ("Il prezzo del suo biglietto è", ticketPrice,"€");
+
 //impostare lo sconto se l'utente ha meno di 18 anni
 
 if(userAge < 18){
 
 let discount = ticketPrice * 20 / 100;
 
-let salePrice =(ticketPrice - discount).toFixed(2);
+let salePrice =(ticketPrice - discount);
 
 console.log(salePrice)
 
@@ -33,7 +34,7 @@ document.getElementById("thank").innerHTML = `Grazie per avere scelto Trenitalia
 document.getElementById("picture").innerHTML ;
 document.getElementById("route").innerHTML = `Lei percorrerà ${route} chilometri`;
 document.getElementById("age").innerHTML = `Lei ha ${userAge} Anni`;
-document.getElementById("price").innerHTML = `il prezzo del suo biglietto è ${salePrice}€ con sconto al 20%`;
+document.getElementById("price").innerHTML = `il prezzo del suo biglietto è ${salePrice.toFixed(2)}€ con sconto al 20%`;
 
 
 
@@ -43,7 +44,7 @@ document.getElementById("price").innerHTML = `il prezzo del suo biglietto è ${s
 
 else if(userAge >=65){
     let oldDiscount = ticketPrice * 40 / 100;
-    let agePrice = (ticketPrice - oldDiscount).toFixed(2);
+    let agePrice = (ticketPrice - oldDiscount);
 
     console.log(agePrice)
 
@@ -51,7 +52,7 @@ else if(userAge >=65){
     document.getElementById("picture").innerHTML  ;
     document.getElementById("route").innerHTML = `Lei percorrerà ${route} chilometri`;
     document.getElementById("age").innerHTML = `Lei ha ${userAge} Anni`;
-    document.getElementById("price").innerHTML = `il prezzo del suo biglietto è ${agePrice}€ con sconto al 40%`;
+    document.getElementById("price").innerHTML = `il prezzo del suo biglietto è ${agePrice.toFixed(2)}€ con sconto al 40%`;
     
 
 }
@@ -63,7 +64,7 @@ else{
     document.getElementById("picture").innerHTML ;
     document.getElementById("route").innerHTML = `Lei percorrerà ${route} chilometri`;
     document.getElementById("age").innerHTML = `Lei ha ${userAge} Anni`;
-    document.getElementById("price").innerHTML = `il prezzo del suo biglietto è ${ticketPrice}€`;
+    document.getElementById("price").innerHTML = `il prezzo del suo biglietto è ${ticketPrice.toFixed(2)}€`;
 }
 
 
